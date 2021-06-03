@@ -48,7 +48,7 @@
      <section class="hero">
          <div class="container">
          <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-         <button type="button" class="hero-button"> Заказать услугу</button>
+         <button type="button" class="hero-button" data-modal-open> Заказать услугу</button>
         </div>
      </section>
            <!-- столбцы списка -->
@@ -59,7 +59,7 @@
         
         <h2 hidden> профессиональные качества</h2>
  <ul class="feature-list">
-     <li class="item">
+     <li class="items">
          <div class="feature-svg">
          <svg class="feature-icon">
              <use href="./image/sprite.svg#icon-antenna"></use>
@@ -73,7 +73,7 @@
         </li>
     
     
-       <li class="item">
+       <li class="items">
         <div class="feature-svg">
             <svg class="feature-icon">
                 <use href="./image/sprite.svg#icon-clock"></use>
@@ -86,7 +86,7 @@
        </li>
    
    
-    <li class="item">
+    <li class="items">
         <div class="feature-svg">
             <svg class="feature-icon">
                 <use href="./image/sprite.svg#icon-diagram"></use>
@@ -100,7 +100,7 @@
        </li>
    
    
-    <li class="item">
+    <li class="items">
         <div class="feature-svg">
             <svg class="feature-icon">
                 <use href="./image/sprite.svg#icon-astronaut"></use>
@@ -125,12 +125,15 @@
     <ul class="work-photo">
         <li class="photo">
     <img src="./image/img.1jpg.jpg" alt=""width="370"/>
+    <p class="overlay-work">Десктопные приложения</p>
          </li>
         <li class="photo">
             <img src="./image/img2.jpg" alt=""width="370"/>
+            <p class="overlay-work">Мобильные приложения</p>
         </li>
         <li class="photo">
             <img src="./image/img3.jpg" alt=""width="370"/>
+            <p class="overlay-work">Дизайнерские решения</p>
         </li>
     </ul>
 </div>
@@ -421,6 +424,18 @@
     </div>
     </div>
 </footer>
-   
+   <div class="backdrop is-hidden" data-modal>
+<div class="modal">
+  <button type="button" class="modal-close" data-modal-close>
+    <svg class="close-ic">
+      <use href="./image/sprite.svg#icon-close-black-18dp-2-1">
+
+      </use>
+    </svg>
+  </button>
+</div>
+   </div>
+
+   <script src="./js/modal.js"></script>
 </body>
 </html>
