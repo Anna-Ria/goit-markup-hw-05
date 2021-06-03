@@ -715,9 +715,9 @@ border-radius: 4px;
     visibility: hidden;
     pointer-events: none;
 }
- .close-ic {
+ .close-icon {
     
     width: 18px;
     height: 18px;
-     
+    fill: currentColor;
  }
