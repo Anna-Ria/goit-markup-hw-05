@@ -67,7 +67,7 @@ letter-spacing: 0.03em; }
 /* logo */
 .page-header {
 
-    border: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
     border-top: 0;
 }
 .logo {
@@ -133,14 +133,19 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-left: auto;
 }
 
-
-.item:hover:after {
+.item .link {
+    position: relative;
+}
+.item .link:hover::after {
     display: block;
+    position: absolute;
     content: "";
     width: 100%;
     height: 4px;
+    border-radius: 2px;
+    margin-top: 28px;
     background-color: var(--accent-color);
-    margin: 0 auto;
+    
 
 }
 .item-contact:not(:last-child) {
@@ -150,6 +155,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .contacts-nav .link {
     display: flex;
+    align-items: center;
     color: var(--primary-text-color) ;
     font-weight: 500;
 font-size: 14px;
@@ -317,16 +323,20 @@ justify-content: center;
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 70px;
   color: var(--white); 
-  background-color: rgba(47, 48, 58, 0.8);
-  padding: 30px 0px 27px 0px; 
+   padding: 30px 0px 27px 0px; 
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.03cm;
+}
+.overlay-section-work {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
 }
 
        /* наша команда*/
@@ -379,7 +389,8 @@ margin-bottom: 16px;
 .employee {
     padding-left: 32px;
     padding-right: 32px;
-    
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .social-list-icon {
     width: 20px;
@@ -416,10 +427,9 @@ margin-bottom: 16px;
 
 .clients {
     padding-top: 94px;
-}
-.clients-list {
     padding-bottom: 94px;
 }
+
 .clients .section-title {
 
     margin-bottom: 50px; 
@@ -461,7 +471,7 @@ height: 92px;
 color: var(--fon-gr);
 border: 1px solid var(--fon-gr);
 border-radius: 4px; 
-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -540,7 +550,7 @@ address {font-style: normal;}
     
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--white);
-     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .footer-list-link:hover,
 .footer-list-link:focus {
@@ -612,7 +622,7 @@ margin-left: -30px;
     }
       
 
-.portfolio-item:focus,
+
 .portfolio-item:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
